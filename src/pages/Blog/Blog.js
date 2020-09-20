@@ -41,7 +41,7 @@ const Blog = ({history, blogAlias}) => {
                             <Card.Img variant="top" src="holder.js/100px160" />*/ }
 
                         <Card.Body>
-                            <Card.Title><Link to={`/${blogAlias}/${post.id}`}>{post.title}</Link> </Card.Title>
+                            <Card.Title><Link to={`/${blogAlias}/${post.post_alias}`}>{post.title}</Link> </Card.Title>
                             <div className="card-text">
                                 <div dangerouslySetInnerHTML={{ __html: post.excerpt }}></div>
                             </div>
