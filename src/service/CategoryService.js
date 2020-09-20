@@ -15,7 +15,6 @@ import {
   EditButton,
   DeleteButton,
   DateField,
-  required,
 } from "react-admin";
 
 const CategoryFilter = (props) => (
@@ -50,7 +49,7 @@ export const CategoryShow = (props) => (
 export const CategoryCreate = (props) => (
   <Create {...props} >
     <SimpleForm>
-      <TextInput source="title" required/>
+      <TextInput source="title" />
     </SimpleForm>
   </Create>
 );
