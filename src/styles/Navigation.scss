@@ -1,0 +1,55 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(85, 85, 134);
+    align-items: center;
+    padding: 0 20px;
+
+    .navbar-toggler {
+        padding: 0;
+    }
+    .navbar-toggler-icon {
+        width: 27px;
+    }
+}
+.navbar-brand{
+    color: white;
+    
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    a { 
+        color: white;
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+}
+.logout{
+    .user-icon {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    &:hover{
+        .user-icon{
+            opacity: 0.8;
+        }
+    }
+}
+.login__signup {
+    padding: 8px 0px;
+    a.active{
+        button{
+            box-shadow:0 0  2px 2px white;
+        }
+    }
+}
+
+.dropdown-toggle:before,
+.dropdown-toggle:after{
+    display: none !important;
+}
