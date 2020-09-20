@@ -1,64 +1,60 @@
 // Polls menu
-.polls-menu{
-    position: relative;
-    
-    a:hover{
-        text-decoration: underline;
+.polls-menu {
+  position: relative;
 
-        &:before{
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: grey;
-            left: 0;
-            top: 0;
-        }
+  a:hover {
+    text-decoration: underline;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: grey;
+      left: 0;
+      top: 0;
     }
+  }
 }
 
 // Question styles
 .answer-item {
-    &:hover{
-      box-shadow: 3px 4px 8px 0px;
-      cursor: pointer;
-    }
-  
-    &.correct,
-    &.incorrect{
-  
-      &:hover{
-        opacity: .9;
-      }
-  
-    }
-  }
-  pre {
-    padding: 10px;
-    overflow-x: auto;
-  }
-  
-  .correct{
-    background-color: green;
-  }
-  .incorrect {
-    background-color: red;
+  &:hover {
+    box-shadow: 3px 4px 8px 0px;
+    cursor: pointer;
   }
 
+  &.correct,
+  &.incorrect {
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+pre {
+  padding: 10px;
+  overflow-x: auto;
+}
 
-  // Admin panel styles
-#add-question-form{
+.correct {
+  background-color: green;
+}
+.incorrect {
+  background-color: red;
+}
+
+// Admin panel styles
+#add-question-form {
   textarea,
   input {
     width: 100%;
     margin-bottom: 0.5rem;
   }
-  input[type="radio"]{  
+  input[type='radio'] {
     width: 14%;
   }
 }
-.admin-questions-list{
+.admin-questions-list {
   max-height: 90vh;
   overflow-y: auto;
 }
-  

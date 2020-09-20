@@ -1,9 +1,9 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from 'react';
 
-const WithSuspense = WrappedComponent => (
-    <Suspense fallback={<div>Loading...</div>}>
-            <WrappedComponent />
-        </Suspense>
-    )
+const WithSuspense = (WrappedComponent) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <WrappedComponent />
+  </Suspense>
+);
 
-export default WithSuspense
+export default WithSuspense;

@@ -1,20 +1,20 @@
-.BlackBg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #101010;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: calc(100vh - 40px) ;
+.BlackBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #101010;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: calc(100vh - 40px);
 }
 
-.BGImg{
-    width: 60vw;
+.BGImg {
+  width: 60vw;
 }
 
 .ErrorText {
-    color: white;
+  color: white;
 }
