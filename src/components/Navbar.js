@@ -16,7 +16,7 @@ const Navigation = ({ history }) => {
         key={menuItem.path}
         to={menuItem.path}
         className='nav-link'
-        exact
+        exact={menuItem.exact}
       >
         {menuItem.displayName}
       </NavLink>

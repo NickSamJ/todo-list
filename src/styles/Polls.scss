@@ -17,6 +17,39 @@
   }
 }
 
+// Poll cart styles
+.poll-body-overlay {
+  height: calc(100vh - 47px);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/forest.jpg');
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -4;
+}
+.poll-body {
+  height: calc(100vh - 47px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  padding: 5px;
+}
+
+.finish-cart-body {
+  text-align: center;
+
+  a {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .poll-body {
+    padding: 40px;
+  }
+}
+
 // Question styles
 .answer-item {
   &:hover {

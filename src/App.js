@@ -22,6 +22,12 @@ import {
   CategoryCreate,
   CategoryEdit,
 } from './service/CategoryService';
+import {
+  PollList,
+  PollShow,
+  PollCreate,
+  PollEdit,
+} from './service/PollService';
 
 // import { CommentList, CommentShow, CommentCreate, CommentEdit } from "./service/CommentsService";
 import { Admin, Resource, EditGuesser } from 'react-admin';
@@ -32,6 +38,7 @@ import {
 import { MdModeComment } from 'react-icons/md';
 import { FaLanguage } from 'react-icons/fa';
 import { MdContentPaste } from 'react-icons/md';
+import { MdPoll } from 'react-icons/md';
 
 import { firebaseConfig as config } from './firebase';
 import {
@@ -108,6 +115,17 @@ const App = () => {
           edit={WordEdit}
           // edit={EditGuesser}
         />
+
+        {/* polls */}
+        <Resource
+          name='polls'
+          list={PollList}
+          show={PollShow}
+          icon={MdPoll}
+          create={PollCreate}
+          edit={PollEdit}
+          //   edit={EditGuesser}
+        />
       </Admin>
     </>
   );
@@ -118,7 +136,10 @@ const App = () => {
         <AlertState>
           <BrowserRouter>
             <Navigation />
-            <div className='container-fluid'>
+            <div
+              className='container-fluid'
+              style={{ padding: 0, position: 'relative' }}
+            >
               <Alert />
               <Switch>
                 <Route path='/react-admin' exact render={() => admminPage} />

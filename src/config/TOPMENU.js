@@ -3,6 +3,7 @@ import LogIn from '../components/Authorisation/LogIn';
 import Dictionary from '../pages/Dictionary';
 import Blog from '../pages/Blog/Blog';
 import BlogRouter from '../pages/Blog/BlogRouter';
+import PollsRouter from '../pages/Polls/PollsRouter';
 
 const { default: Home } = require('../pages/Home');
 const { default: About } = require('../pages/About');
@@ -12,14 +13,18 @@ const {
 
 const TOPMENU = [
   { path: '/', displayName: 'Home', component: Home, exact: true },
-  { path: '/about', displayName: 'About', component: About, exact: true },
-  { path: '/js-polls', displayName: 'Polls', component: '', exact: true },
   {
-    path: '/add-question',
-    displayName: 'Manage questions',
-    component: QuestionConstructor,
-    exact: true,
+    path: '/polls',
+    displayName: 'Polls',
+    component: PollsRouter,
+    exact: false,
   },
+  // {
+  //   path: '/add-question',
+  //   displayName: 'Manage questions',
+  //   component: QuestionConstructor,
+  //   exact: true,
+  // },
   {
     path: '/dictionary',
     displayName: 'Dictionary',
@@ -32,6 +37,7 @@ const TOPMENU = [
     component: BlogRouter,
     exact: false,
   },
+  { path: '/about', displayName: 'About', component: About, exact: true },
 
   // {path: '/reset-password', displayName: 'ResetPa', component: SignUp},
   // {path: '/login', displayName: 'Login', component: LogIn},
