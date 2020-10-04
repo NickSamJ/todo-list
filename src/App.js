@@ -49,12 +49,8 @@ import {
   WordList,
   WordEdit,
 } from './service/DIctionaryService';
+import WeatherApp from './components/Portfolio/WeatherApp/WeatherApp';
 
-// import WithSuspense from './HOC/withSuspensce'
-// import CustomLoginPage from './CustomLoginPage';
-// import AdminPanel from './pages/AdminPanel'
-
-// const AdminPanel = lazy(() => import('./pages/AdminPanel'))
 const App = () => {
   const topMenuLinks = TOPMENU.map((menuItem) => {
     return (
@@ -68,7 +64,6 @@ const App = () => {
   });
 
   const options = {
-    logging: true,
     // rootRef: ''
   };
   const dataProvider = FirebaseDataProvider(config, options);
@@ -143,6 +138,7 @@ const App = () => {
               <Alert />
               <Switch>
                 <Route path='/react-admin' exact render={() => admminPage} />
+                {/* <Route path='/weather' exact component={WeatherApp} /> */}
 
                 {topMenuLinks}
                 <Route path='/login' exact component={LogIn} />

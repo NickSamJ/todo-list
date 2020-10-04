@@ -1,0 +1,35 @@
+export default {
+  coord: { lon: -0.13, lat: 51.51 },
+  weather: [
+    {
+      id: 802,
+      main: 'Clouds',
+      description: 'scattered clouds',
+      icon: '03n',
+    },
+  ],
+  base: 'stations',
+  main: {
+    temp: 287.18,
+    feels_like: 285.51,
+    temp_min: 284.82,
+    temp_max: 289.26,
+    pressure: 1015,
+    humidity: 72,
+  },
+  visibility: 10000,
+  wind: { speed: 2.1, deg: 230 },
+  clouds: { all: 27 },
+  dt: 1601417091,
+  sys: {
+    type: 1,
+    id: 1414,
+    country: 'GB',
+    sunrise: 1601359101,
+    sunset: 1601401379,
+  },
+  timezone: 3600,
+  id: 2643743,
+  name: 'London',
+  cod: 200,
+};

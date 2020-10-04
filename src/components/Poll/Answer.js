@@ -21,7 +21,7 @@ const Answer = ({ answer, isCorrect, answerHandler, disabled }) => {
         }}
         variant={buttonStyle}
         disabled={disabled}
-        style={{ marginTop: 20 }}
+        style={{ marginTop: 20, textAlign: 'left' }}
         block
       >
         {answer}

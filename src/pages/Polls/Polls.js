@@ -40,16 +40,19 @@ const Polls = ({ history, urlAlias }) => {
               <Card.Title>
                 <Link to={`/${urlAlias}/${poll.alias}`}>{poll.title}</Link>{' '}
               </Card.Title>
-              <div className='card-text'>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: poll.excerpt,
-                  }}
-                ></div>
-              </div>
+              {poll.description && (
+                <div className='card-text'>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: poll.description,
+                    }}
+                  ></div>
+                </div>
+              )}
+
               <Card.Text>
                 <small className='text-muted'>
-                  Date:{' '}
+                  Created:{' '}
                   {new Date(
                     poll.createdate.seconds * 1000
                   ).toLocaleDateString()}
@@ -63,7 +66,7 @@ const Polls = ({ history, urlAlias }) => {
   );
   return (
     <Container style={{ paddingTop: '4rem' }}>
-      <h1>Polls</h1>
+      <h1>Polls ✅</h1>
 
       {pollsLoaded ? <CardColumns> {pollsList}</CardColumns> : <Loader />}
     </Container>

@@ -106,10 +106,16 @@ export const LanguageEdit = (props) => {
 export const WordCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source='word' label='Enter word' validate={required()} />
+      <TextInput
+        source='word'
+        label='Enter word'
+        fullWidth
+        validate={required()}
+      />
       <TextInput
         source='translate'
         label='Enter translate'
+        fullWidth
         validate={required()}
       />
       <ReferenceInput
@@ -131,7 +137,9 @@ export const WordList = (props) => (
     <Datagrid rowClick='edit'>
       <TextField source='word' />
       <TextField source='translate' />
-      <TextField source='language' />
+      <ReferenceField label='Language' source='language' reference='languages'>
+        <TextField source='title' />
+      </ReferenceField>
       <RichTextField source='comment' />
       <RichTextField source='usefulLinks' />
       <EditButton label='' />
@@ -167,7 +175,14 @@ export const WordEdit = (props) => {
           <div className={classes.formColumn}>
             <TextInput source='word' validate={required()} fullWidth />
             <TextInput source='translate' validate={required()} fullWidth />
-            <TextInput source='language' fullWidth />
+            <ReferenceInput
+              label='Language'
+              source='language'
+              reference='languages'
+              fullWidth
+            >
+              <SelectInput optionText='title' />
+            </ReferenceInput>
           </div>
           <div className={classes.formColumn}>
             <TextInput source='id' options={{ disabled: true }} />

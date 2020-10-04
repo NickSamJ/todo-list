@@ -4,6 +4,7 @@ import Dictionary from '../pages/Dictionary';
 import Blog from '../pages/Blog/Blog';
 import BlogRouter from '../pages/Blog/BlogRouter';
 import PollsRouter from '../pages/Polls/PollsRouter';
+import WeatherApp from '../components/Portfolio/WeatherApp/WeatherApp';
 
 const { default: Home } = require('../pages/Home');
 const { default: About } = require('../pages/About');
@@ -19,12 +20,12 @@ const TOPMENU = [
     component: PollsRouter,
     exact: false,
   },
-  // {
-  //   path: '/add-question',
-  //   displayName: 'Manage questions',
-  //   component: QuestionConstructor,
-  //   exact: true,
-  // },
+  {
+    path: '/weather',
+    displayName: 'Weather',
+    component: WeatherApp,
+    exact: true,
+  },
   {
     path: '/dictionary',
     displayName: 'Dictionary',

@@ -33,6 +33,7 @@ const PollBody = ({
         pollInfo.questions[currentQuestion].answerVariants.map((answer) => {
           return (
             <Answer
+              key={answer.answer}
               answerHandler={answerHandler}
               answer={answer.answer}
               isCorrect={answer.isCorrect}
@@ -68,7 +69,7 @@ const PollBody = ({
   );
 
   return (
-    <div>
+    <>
       <div className='poll-body-overlay'></div>
       <div className='poll-body'>
         {pollInfo && pollInfo.questions ? (
@@ -119,7 +120,7 @@ const PollBody = ({
           </Card>
         ) : null}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,58 @@
+[
+  {
+    "lang_name": "US",
+    "data": {
+      "icon_code": "US",
+      "lang_code": "US",
+      "name": "english"
+    },
+    "translates": {
+      "enter_city": "Your city",
+      "current": "Current",
+      "forecast": "5 Days",
+      "city_not_found": "City not found"
+    }
+  },
+  {
+    "lang_name": "RU",
+    "data": {
+      "icon_code": "RU",
+      "lang_code": "RU",
+      "name": "russian"
+    },
+    "translates": {
+      "enter_city": "Введите город",
+      "current": "Текущая",
+      "forecast": "5 Дней",
+      "city_not_found": "Город не найден"
+    }
+  },
+  {
+    "lang_name": "ES",
+    "data": {
+      "icon_code": "ES",
+      "lang_code": "Es",
+      "name": "spanish"
+    },
+    "translates": {
+      "enter_city": "Ingrese ciudad",
+      "current": "Actual",
+      "forecast": "5 Dias",
+      "city_not_found": "Ciudad no encontrada"
+    }
+  },
+  {
+    "lang_name": "he",
+    "data": {
+      "icon_code": "IL",
+      "lang_code": "HE",
+      "name": "hebrew"
+    },
+    "translates": {
+      "enter_city": "הזן את שם העיר",
+      "current": "מזג אוויר נוכחי",
+      "forecast": "5 ימים",
+      "city_not_found": "העיר לא נמצאה"
+    }
+  }
+]
