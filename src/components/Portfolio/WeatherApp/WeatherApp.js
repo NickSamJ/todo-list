@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import WeatherBanner from './components/WeatherBanner';
 import './styles.scss';
 import testData from './testData/test-current-weather';
@@ -41,6 +41,7 @@ const getDefaultLangData = () => {
 };
 const defaultLangData = getDefaultLangData();
 
+// Main Component
 const WeatherApp = () => {
   // const [currentWeather, setCurrentWeather] = useState(testData);
   // const [currentWeather, setCurrentWeather] = useState(testForecastData);
@@ -53,6 +54,11 @@ const WeatherApp = () => {
   const [langData, setLangData] = useState(defaultLangData);
   const [mode, setMode] = useState(CURRENT);
 
+  useEffect(() => {
+    document.title = 'Weather';
+    return () => (document.title = 'All is here');
+  }, []);
+
   const input = useRef();
 
   const resetWeather = () => {
@@ -62,7 +68,7 @@ const WeatherApp = () => {
 
   const apiKey = process.env.REACT_APP_WEATHER;
   const getRequestUrl = () => {
-    return `http://api.openweathermap.org/data/2.5/${
+    return `https://api.openweathermap.org/data/2.5/${
       mode === CURRENT ? 'weather' : 'forecast'
     }?q=${city}&lang=${langData.lang_name}&units=metric&appid=${apiKey}`;
   };
